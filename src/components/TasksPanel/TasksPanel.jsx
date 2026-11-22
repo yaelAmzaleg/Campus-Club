@@ -8,8 +8,39 @@ import styles from './TasksPanel.module.css'
  * @param {(taskId: number) => void} props.onToggleTask - call it with task.id when a task checkbox is clicked
  */
 export default function TasksPanel({ member, tasks, onToggleTask }) {
-  // TODO: no member selected -> "Select a member to see their tasks"
-  // TODO: the member has no tasks -> "No tasks yet"
-  // TODO: otherwise, a loop over tasks: a checkbox (checked = done) + the title, inside a <label>
+  if (!member) {
+    return (
+      <aside className={styles.tasksPanel} aria-label="Tasks panel">
+        <p className={styles.empty}>Select a member to see their tasks</p>
+      </aside>
+    )
+  }
+  return (
+    <aside className={styles.tasksPanel} aria-label="Tasks panel">
+      <h2 className={styles.title}>{member.name}</h2>
+      {tasks.length === 0 ? (
+        <p className={styles.empty}>No tasks yet</p>
+      ) : (
+        <ul className={styles.tasks}>
+          {tasks.map((task) => {
+            const taskClasses = [
+              styles.task,
+              task.done ? styles.done : '',
+            ]
+              .filter(Boolean)
+              .join(' ')
+              return(
+                <li key={task.id}>
+                  <label className={taskClasses}>
+                    <input type="checkbox" checked={task.done} onChange={() => onToggleTask(task.id)}/>
+                    <span>{task.title}</span>
+                  </label>
+                </li>
+              )
+          })}
+        </ul>
+      )}
+    </aside>
+  )
   return null
 }

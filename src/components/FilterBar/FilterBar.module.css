@@ -1,23 +1,35 @@
-/* FilterBar styles - add your own styling to these classes (you can add more classes too).
-   Use them in FilterBar.jsx: className={styles.filterBar}
-   Don't delete the classes marked "REQUIRED BY THE TESTS". */
-
-/* the whole bar */
 .filterBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
 }
 
-/* the <label> with the checkbox */
 .toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #1f2937;
 }
 
-/* the wrapper of the List / Grid buttons */
 .layoutSwitch {
+  display: flex;
+  gap: 8px;
 }
 
-/* REQUIRED BY THE TESTS: the button of the current layout */
 .active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
 }
 
-/* bonus: the search input */
 .search {
+  padding: 6px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
 }

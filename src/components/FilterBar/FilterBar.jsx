@@ -15,7 +15,17 @@ export default function FilterBar({
   layout,
   onLayoutChange,
 }) {
-  // TODO: a checkbox inside a <label> with the text "Show only active members"
-  // TODO: two buttons: "List" and "Grid"
-  return null
+  return(
+  <section className={styles.filterBar} aria-label="Member filters and layout">
+  <label className={styles.toggle}><input type="checkbox" checked={showOnlyActive} onChange={onToggleActive}></input> Show only active members</label>
+  <nav className={styles.layoutSwitch} aria-label="Layout view">
+    <button type="button" onClick={()=> onLayoutChange('list')} className={layout === 'list' ? styles.active : ''}>
+List
+    </button>
+    <button type="button" onClick={()=> onLayoutChange('grid')} className={layout === 'grid' ? styles.active : ''}>
+Grid
+    </button>
+  </nav>
+</section>
+ )
 }

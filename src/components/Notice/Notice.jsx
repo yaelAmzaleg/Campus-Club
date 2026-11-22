@@ -7,6 +7,10 @@ import styles from './Notice.module.css'
  * @param {React.ReactNode} props.children - the text of the notice
  */
 export default function Notice({ type, children }) {
-  // TODO
-  return null
+ const typeClass = type === 'info' ? styles.info : styles.warning
+  return (
+    <aside className={`${styles.notice} ${typeClass}`} role="status">
+      {children}
+    </aside>
+  )
 }

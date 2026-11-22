@@ -1,4 +1,5 @@
 // MembersList - wraps all the MemberCards and switches between list and grid.
+import MemberCard from '../MemberCard/MemberCard'
 import styles from './MembersList.module.css'
 
 /**
@@ -14,7 +15,13 @@ export default function MembersList({
   selectedMemberId,
   onSelect,
 }) {
-  // TODO: a loop over members -> <MemberCard ... />
-  // TODO: if there are no members -> the message "No members to show"
-  return null
+if(members.length==0)
+  return <p className={styles.empty}>No members to show</p>
+  const layoutClass = layout === 'grid' ? styles.grid : styles.list
+  return (
+    <section className={`${styles.membersList} ${layoutClass}`}
+      aria-label="Club members">
+        { members.map((member) => ( <MemberCard key={member.id} member={member} isSelected={member.id===selectedMemberId} onSelect={onSelect}/>))}
+    </section>
+  )
 }

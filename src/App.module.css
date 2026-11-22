@@ -1,11 +1,30 @@
-/* App styles - add your own styling to these classes (you can add more classes too).
-   Use them in App.jsx: className={styles.app}
-   Don't delete the classes marked "REQUIRED BY THE TESTS". */
-
-/* the whole page */
 .app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9fafb;
 }
 
-/* the area with the members and the tasks panel */
+.main {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
 .content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
 }
