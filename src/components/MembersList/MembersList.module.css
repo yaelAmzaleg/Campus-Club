@@ -1,0 +1,19 @@
+/* MembersList styles - add your own styling to these classes (you can add more classes too).
+   Use them in MembersList.jsx: className={styles.membersList}
+   Don't delete the classes marked "REQUIRED BY THE TESTS". */
+
+/* REQUIRED BY THE TESTS: the element that wraps all the cards */
+.membersList {
+}
+
+/* REQUIRED BY THE TESTS: list layout - one card under the other */
+.list {
+}
+
+/* REQUIRED BY THE TESTS: grid layout - cards in columns */
+.grid {
+}
+
+/* the message "No members to show" */
+.empty {
+}

@@ -1,0 +1,11 @@
+/* Header styles - add your own styling to these classes (you can add more classes too).
+   Use them in Header.jsx: className={styles.header}
+   Don't delete the classes marked "REQUIRED BY THE TESTS". */
+
+/* the <header> wrapper */
+.header {
+}
+
+/* the <h1> - big, centered, bold */
+.title {
+}

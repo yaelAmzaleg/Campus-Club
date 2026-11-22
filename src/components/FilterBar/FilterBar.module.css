@@ -1,0 +1,23 @@
+/* FilterBar styles - add your own styling to these classes (you can add more classes too).
+   Use them in FilterBar.jsx: className={styles.filterBar}
+   Don't delete the classes marked "REQUIRED BY THE TESTS". */
+
+/* the whole bar */
+.filterBar {
+}
+
+/* the <label> with the checkbox */
+.toggle {
+}
+
+/* the wrapper of the List / Grid buttons */
+.layoutSwitch {
+}
+
+/* REQUIRED BY THE TESTS: the button of the current layout */
+.active {
+}
+
+/* bonus: the search input */
+.search {
+}

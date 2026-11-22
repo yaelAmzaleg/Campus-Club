@@ -1,0 +1,35 @@
+/* TasksPanel styles - add your own styling to these classes (you can add more classes too).
+   Use them in TasksPanel.jsx: className={styles.tasksPanel}
+   Don't delete the classes marked "REQUIRED BY THE TESTS". */
+
+/* the whole panel */
+.tasksPanel {
+}
+
+/* the title with the member name */
+.title {
+}
+
+/* the list of tasks */
+.tasks {
+}
+
+/* one task */
+.task {
+}
+
+/* a done task (e.g. line-through) */
+.done {
+}
+
+/* the messages "Select a member..." / "No tasks yet" */
+.empty {
+}
+
+/* bonus: the done/total counter */
+.counter {
+}
+
+/* bonus: the quick add form */
+.quickAdd {
+}

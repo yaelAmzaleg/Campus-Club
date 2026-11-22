@@ -1,0 +1,11 @@
+/* App styles - add your own styling to these classes (you can add more classes too).
+   Use them in App.jsx: className={styles.app}
+   Don't delete the classes marked "REQUIRED BY THE TESTS". */
+
+/* the whole page */
+.app {
+}
+
+/* the area with the members and the tasks panel */
+.content {
+}

@@ -1,0 +1,21 @@
+/* Global base styles for the whole page.
+   The styles of each component go in its own .module.css file. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    'Segoe UI',
+    Roboto,
+    Arial,
+    sans-serif;
+  line-height: 1.5;
+  color: #1f2937;
+  background: #f3f4f6;
+}
